@@ -57,7 +57,7 @@ BEGIN
 
 		-- bronze.crm_prd_info TABLE
 
-        SET @start_time = GETDATE();
+        	SET @start_time = GETDATE();
 		PRINT '>> Truncating Table: bronze.crm_prd_info';
 		TRUNCATE TABLE bronze.crm_prd_info;
 		PRINT '>> Inserting Data Into: bronze.crm_prd_info';
@@ -76,7 +76,7 @@ BEGIN
 
 		-- bronze.crm_sales_details TABLE
 
-        SET @start_time = GETDATE();
+        	SET @start_time = GETDATE();
 		PRINT '>> Truncating Table: bronze.crm_sales_details';
 		TRUNCATE TABLE bronze.crm_sales_details;
 		PRINT '>> Inserting Data Into: bronze.crm_sales_details';
@@ -160,7 +160,7 @@ BEGIN
 		SET @batch_end_time = GETDATE();
 		
 		PRINT '=========================================='
-		PRINT 'Loading Bronze Layer is Completed';
+			PRINT 'Loading Bronze Layer is Completed';
         PRINT '   - Total Load Duration: ' + CAST(DATEDIFF(SECOND, @batch_start_time, @batch_end_time) AS NVARCHAR) + ' seconds';
 		PRINT '=========================================='
 
@@ -178,3 +178,4 @@ BEGIN
 	END CATCH
 
 END
+

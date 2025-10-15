@@ -56,8 +56,8 @@ BEGIN
 		PRINT '>> -------------';
 
 		-- bronze.crm_prd_info TABLE
-        
-        SET @start_time = GETDATE();
+
+		SET @start_time = GETDATE();
 		PRINT '>> Truncating Table: bronze.crm_prd_info';
 		TRUNCATE TABLE bronze.crm_prd_info;
 		PRINT '>> Inserting Data Into: bronze.crm_prd_info';
@@ -178,5 +178,3 @@ BEGIN
 	END CATCH
 
 END
-
-

@@ -80,18 +80,16 @@ data-warehouse-project/
 │
 ├── datasets/         # Raw data files (e.g., CSVs) from ERP and CRM sources.
 ├── docs/             # Project documentation and architectural diagrams.
-│   ├── etl.drawio          # Diagrams illustrating ETL techniques and methodologies.
-│   ├── data_architecture.drawio # Diagram of the Bronze/Silver/Gold architecture.
-│   ├── data_catalog.md     # Metadata catalog including field descriptions.
-│   ├── data_flow.drawio    # Detailed data flow diagram.
-│   ├── data_models.drawio  # Diagrams for data models (Star Schema).
-│   └── naming-conventions.md # Guidelines for consistent naming across assets.
+│   ├── Project Architecture.drawio          # Diagrams illustrating ETL techniques and methodologies.
+│   ├── Data Architecture.png                # Diagram of the Bronze/Silver/Gold architecture.
+│   ├── data_catalog.md                      # Metadata catalog including field descriptions.
+│   ├── Data Flow Diagram.png                # Detailed data flow diagram.
+│   ├── Sales Data Mart Schema.png           # Diagrams for data models (Star Schema).
+│   └── naming-conventions.md                # Guidelines for consistent naming across assets.
 ├── scripts/          # SQL scripts organized by data warehouse layer.
-│   ├── bronze/       # Scripts for initial data extraction and loading (ELT step).
-│   ├── silver/       # Scripts for data cleaning, transformation, and conformance.
-│   └── gold/         # Scripts for creating analytical Fact and Dimension tables.
+│   ├── bronze/                              # Scripts for initial data extraction and loading (ELT step).
+│   ├── silver/                              # Scripts for data cleaning, transformation, and conformance.
+│   └── gold/                                # Scripts for creating analytical Fact and Dimension tables.
 ├── tests/            # Test scripts and SQL files for data quality checks.
-├── LICENSE           # License information.
-├── .gitignore        # Files and directories to be ignored by Git.
-└── requirements.txt  # Dependencies and requirements list.
+├── README.md         # Summarizes the project and explains the peoject methodology
 ```

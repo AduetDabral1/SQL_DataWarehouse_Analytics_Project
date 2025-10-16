@@ -14,11 +14,15 @@ Usage:
 ===============================================================================
 */
 
--- =============================================================================
--- Create Dimension: gold.dim_customers
--- =============================================================================
+USE DataWarehouse;
+GO
 
-use DataWarehouse;
+/*
+=============================================================================
+Create Dimension: gold.dim_customers
+=============================================================================
+*/
+
 IF OBJECT_ID('gold.dim_customers', 'V') IS NOT NULL
     DROP VIEW gold.dim_customers;
 GO
@@ -33,8 +37,8 @@ SELECT
     la.cntry                           AS country,
     ci.cst_marital_status              AS marital_status,
     CASE 
-        WHEN ci.cst_gndr != 'n/a' THEN ci.cst_gndr -- CRM is the primary source for gender
-        ELSE COALESCE(ca.gen, 'n/a')  			   -- Fallback to ERP data
+        WHEN ci.cst_gndr != 'N/A' THEN ci.cst_gndr       -- CRM is the primary source for gender
+        ELSE COALESCE(ca.gen, 'N/A')  			         -- Fallback to ERP data
     END                                AS gender,
     ca.bdate                           AS birthdate,
     ci.cst_create_date                 AS create_date
@@ -45,9 +49,12 @@ LEFT JOIN silver.erp_loc_a101 la
     ON ci.cst_key = la.cid;
 GO
 
--- =============================================================================
--- Create Dimension: gold.dim_products
--- =============================================================================
+/*
+=============================================================================
+Create Dimension: gold.dim_products
+=============================================================================
+*/
+
 IF OBJECT_ID('gold.dim_products', 'V') IS NOT NULL
     DROP VIEW gold.dim_products;
 GO
@@ -68,24 +75,30 @@ SELECT
 FROM silver.crm_prd_info pn
 LEFT JOIN silver.erp_px_cat_g1v2 pc
     ON pn.cat_id = pc.id
-WHERE pn.prd_end_dt IS NULL; -- Filter out all historical data
+WHERE pn.prd_end_dt IS NULL;                        -- Filter out all historical data
 GO
 
--- =============================================================================
--- Create Fact Table: gold.fact_sales
--- =============================================================================
+/*
+=============================================================================
+Create Fact Table: gold.fact_sales
+=============================================================================
+*/
+
 IF OBJECT_ID('gold.fact_sales', 'V') IS NOT NULL
     DROP VIEW gold.fact_sales;
 GO
 
 CREATE VIEW gold.fact_sales AS
 SELECT
+--Dimension Keys
     sd.sls_ord_num  AS order_number,
     pr.product_key  AS product_key,
     cu.customer_key AS customer_key,
+--Dates    
     sd.sls_order_dt AS order_date,
     sd.sls_ship_dt  AS shipping_date,
     sd.sls_due_dt   AS due_date,
+--Measures    
     sd.sls_sales    AS sales_amount,
     sd.sls_quantity AS quantity,
     sd.sls_price    AS price

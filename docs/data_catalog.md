@@ -61,4 +61,5 @@ The Gold Layer is the business-level data representation, structured to support 
 | price           | INT           | The price per unit of the product for the line item, in whole currency units (e.g., 25).      |
 
 ### **GOLD LAYER - Sales Data Mart (Star Schema)**
-![Sales Data Mart Schema](https://drive.google.com/file/d/1_amiPwCAMOktz8ZLgbIg8Gy02uLZixDD/view?usp=sharing)
+<img width="1082" height="607" alt="Sales Data Mart Schema" src="https://github.com/user-attachments/assets/6cbd8b24-fd64-4183-af79-3e0f778b48f0" />
+

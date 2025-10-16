@@ -47,7 +47,7 @@ This project encompasses the following core technical phases:
 
 ## 🚀 Project Requirements and Deliverables
 
-### Data Engineering (Data Warehouse Build)
+### 1. Data Engineering (Data Warehouse Build)
 
 **Objective:** Develop a SQL Server data warehouse to consolidate sales data from disparate sources into a unified analytical model.
 
@@ -59,7 +59,7 @@ This project encompasses the following core technical phases:
   * **Scope:** The focus is on consolidating the **latest dataset**; **data historization** (Type 2 SCDs) is **not required**.
   * **Documentation:** Provide detailed **data model documentation** (e.g., entity-relationship diagrams, metadata).
 
-### Business Intelligence (Analytics & Reporting)
+### 2. Business Intelligence (Analytics & Reporting)
 
 **Objective:** Generate detailed, SQL-based analytical insights to drive strategic decision-making.
 

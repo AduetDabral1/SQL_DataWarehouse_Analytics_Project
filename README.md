@@ -100,3 +100,6 @@ data-warehouse-project/
 ├── tests/                # Test scripts and SQL files for data quality checks.
 ├── README.md             # Summarizes the project and explains the peoject methodology
 ```
+
+## NOTION Epics and Tasks Tracker 
+https://ballistic-mule-e8a.notion.site/Data-Warehouse-Project-SQL-28b5f893402880078e79c1451d063e8f?source=copy_link

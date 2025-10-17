@@ -7,7 +7,11 @@ Purpose:
     - Identify the unique values (or categories) in each dimension.
     - Recognizing how data might be grouped or segmented, which is useful for 
       later analysis.
-	
+	- Measure : Any numerical column which can be aggregated to provide additonal 
+	  context and meaning to the data.
+	- Dimension : Any non-numeric column, or a numeric column whose aggregation 
+	  doesn't make sense (e.g., ID)
+
 SQL Functions Used:
     - DISTINCT [dimension]
     - ORDER BY
@@ -28,3 +32,4 @@ SELECT DISTINCT
     product_name
 FROM gold.dim_products
 GROUP BY category, subcategory, product_name;
+

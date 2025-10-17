@@ -59,6 +59,9 @@ This project encompasses the following core technical phases:
   * **Scope:** The focus is on consolidating the **latest dataset**; **data historization** (Type 2 SCDs) is **not required**.
   * **Documentation:** Provide detailed **data model documentation** (e.g., entity-relationship diagrams, metadata).
 
+<img width="1332" height="746" alt="Data Flow Diagram" src="https://github.com/user-attachments/assets/8b640301-92d5-4a3a-8448-5543f94286c3" />
+
+
 ### 2. Business Intelligence (Analytics & Reporting)
 
 **Objective:** Generate detailed, SQL-based analytical insights to drive strategic decision-making.
@@ -68,6 +71,8 @@ This project encompasses the following core technical phases:
   * Metrics and reports concerning **Customer Behavior**.
   * Metrics and reports concerning **Product Performance**.
   * Metrics and reports concerning **Sales Trends**.
+
+<img width="2141" height="916" alt="Analytics Project Roadmap" src="https://github.com/user-attachments/assets/7a523821-023f-410a-874a-77b0d72cbd75" />
 
 -----
 

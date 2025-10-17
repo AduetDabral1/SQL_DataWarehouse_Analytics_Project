@@ -83,18 +83,20 @@ The project code and documentation are organized as follows:
 ```
 data-warehouse-project/
 │
-├── datasets/         # Raw data files (e.g., CSVs) from ERP and CRM sources.
-├── docs/             # Project documentation and architectural diagrams.
+├── analytics_scripts/   # SQL scripts for performing EDA and detailed analysis on prepared data in gold layer of data warehouse
+│   ├── query_outputs                        # Screenshots illustrating outputs for SQL queries used for data analysis.
+├── datasets/            # Raw data files (e.g., CSVs) from ERP and CRM sources.
+├── docs/                # Project documentation and architectural diagrams.
 │   ├── Project Architecture.drawio          # Diagrams illustrating ETL techniques and methodologies.
 │   ├── Data Architecture.png                # Diagram of the Bronze/Silver/Gold architecture.
 │   ├── data_catalog.md                      # Metadata catalog including field descriptions.
 │   ├── Data Flow Diagram.png                # Detailed data flow diagram.
 │   ├── Sales Data Mart Schema.png           # Diagrams for data models (Star Schema).
 │   └── naming-conventions.md                # Guidelines for consistent naming across assets.
-├── scripts/          # SQL scripts organized by data warehouse layer.
+├── dwh_scripts/          # SQL scripts organized by data warehouse layer.
 │   ├── bronze/                              # Scripts for initial data extraction and loading (ELT step).
 │   ├── silver/                              # Scripts for data cleaning, transformation, and conformance.
 │   └── gold/                                # Scripts for creating analytical Fact and Dimension tables.
-├── tests/            # Test scripts and SQL files for data quality checks.
-├── README.md         # Summarizes the project and explains the peoject methodology
+├── tests/                # Test scripts and SQL files for data quality checks.
+├── README.md             # Summarizes the project and explains the peoject methodology
 ```

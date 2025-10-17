@@ -32,7 +32,8 @@ FROM gold.dim_customers;
 
 /*
 -- To select names of the oldest and youngest customers
-SELECT DISTINCT
+
+SELECT 
 	t1.first_name + ' ' + t1.last_name AS oldest_customer,
 	t1.birthdate AS oldest_birthdate,
 	DATEDIFF (YEAR, t1.birthdate, GETDATE()) AS oldest_customer_age,
@@ -46,4 +47,5 @@ WHERE
 	t1.birthdate = (SELECT MIN (birthdate) from gold.dim_customers)
 	AND
 	t2.birthdate = (SELECT MAX (birthdate) from gold.dim_customers);
+
 	*/
